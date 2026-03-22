@@ -1,0 +1,44 @@
+# 서버 코드 (비공개)
+server.js
+a2a.js
+mcp-server.js
+seo.js
+verify.js
+scheduler.js
+schema.sql
+dashboard.html
+swagger.json
+discovery.js
+recruiter.js
+
+# 크롤러
+*-crawler.js
+crawler.js
+
+# 설정/수정 스크립트
+add-*.js
+fix-*.js
+update-*.js
+clean-*.js
+stats-*.js
+register-*.js
+auto-*.js
+
+# 민감 데이터
+node_modules/
+*.log
+.env
+package-lock.json
+
+# 기타 서버 파일
+connect-*.js
+record-*.js
+fork-*.js
+code-templates.js
+data-crawler.js
+dataset-market.js
+model-health-check.js
+open-prompt-dataset-crawler.js
+prompt-crawler.js
+server-*.js
+*.tmp
