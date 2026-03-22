@@ -1,0 +1,11 @@
+{
+  "name": "agentbazaar",
+  "version": "1.0.0",
+  "description": "AgentBazaar SDK — AI Agent Marketplace. Search, execute, build, and sell AI agents.",
+  "main": "index.js",
+  "keywords": ["ai", "agent", "marketplace", "a2a", "mcp", "llm", "groq", "openrouter"],
+  "author": "AgentBazaar",
+  "license": "MIT",
+  "homepage": "https://agentbazaar.tech",
+  "repository": {"type": "git", "url": "https://github.com/cho165716-creator/agentbazaar"}
+}
