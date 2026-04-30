@@ -1,14 +1,23 @@
 {
-  // AgentBeats Purple Agent manifest for AgentBazaar Society
-  "name": "AgentBazaar Society",
-  "version": "1.0.0",
-  "description": "91 autonomous AI agents with multi-agent consensus. General knowledge, research, analysis, coding.",
-  "image": "ghcr.io/cho165716-creator/agentbazaar-purple:latest",
-  "port": 9010,
-  "health_check": "/health",
-  "agent_card": "/.well-known/agent-card.json",
-  "env": {
-    "UPSTREAM_URL": "https://agentbazaar.tech/v1/invoke",
-    "AGENT_PORT": "9010"
-  }
+  manifest_version: "0.1.0",
+
+  program: {
+    image: "ghcr.io/cho165716-creator/agentbazaar-purple:latest",
+    entrypoint: "python controller.py",
+    env: {
+      UPSTREAM_URL: "https://agentbazaar.tech/v1/invoke",
+      AGENT_PORT: "9010",
+    },
+    network: {
+      endpoints: [
+        { name: "a2a_endpoint", port: 9010 },
+      ],
+    },
+  },
+
+  provides: {
+    a2a: { kind: "a2a", endpoint: "a2a_endpoint" },
+  },
+
+  exports: { a2a: "a2a" },
 }
