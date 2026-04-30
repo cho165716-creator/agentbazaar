@@ -1,6 +1,13 @@
 {
   manifest_version: "0.1.0",
 
+  config_schema: {
+    type: "object",
+    properties: {},
+    required: [],
+    additionalProperties: false,
+  },
+
   program: {
     image: "ghcr.io/cho165716-creator/agentbazaar-purple:latest",
     entrypoint: "python controller.py",
